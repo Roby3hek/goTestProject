@@ -43,9 +43,9 @@ const (
 type TaskRecurrence struct {
 	TaskID               int64          `json:"task_id"`
 	RecurrenceType       RecurrenceType `json:"recurrence_type"`
-	RecurrenceInterval   int            `json:"recurrence_interval"`     // для daily
-	RecurrenceDayOfMonth *int           `json:"recurrence_day_of_month"` // для monthly (1-31)
-	SpecificDates        string         `json:"specific_dates"`          // "2026-04-15,2026-05-20"
+	RecurrenceInterval   int            `json:"recurrence_interval"`     
+	RecurrenceDayOfMonth *int           `json:"recurrence_day_of_month"` 
+	SpecificDates        string         `json:"specific_dates"`          
 	StartDate            time.Time      `json:"start_date"`
 	EndDate              *time.Time     `json:"end_date,omitempty"`
 	CreatedAt            time.Time      `json:"created_at"`
