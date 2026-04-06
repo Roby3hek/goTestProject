@@ -45,8 +45,6 @@ type UpdateInput struct {
 	Title       string
 	Description string
 	Status      taskdomain.Status
-
-	// Периодичность (HasRecurrence = true, если клиент передал хотя бы одно поле recurrence)
 	HasRecurrence        bool
 	RecurrenceType       taskdomain.RecurrenceType
 	RecurrenceInterval   int

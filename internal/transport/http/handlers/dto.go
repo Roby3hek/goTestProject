@@ -10,8 +10,6 @@ type taskMutationDTO struct {
 	Title       string            `json:"title"`
 	Description string            `json:"description"`
 	Status      taskdomain.Status `json:"status"`
-
-	// Периодичность
 	RecurrenceType       taskdomain.RecurrenceType `json:"recurrence_type,omitempty"`
 	RecurrenceInterval   int                       `json:"recurrence_interval,omitempty"`
 	RecurrenceDayOfMonth *int                      `json:"recurrence_day_of_month,omitempty"`
@@ -27,8 +25,6 @@ type taskDTO struct {
 	Status      taskdomain.Status `json:"status"`
 	CreatedAt   time.Time         `json:"created_at"`
 	UpdatedAt   time.Time         `json:"updated_at"`
-
-	// Периодичность (опционально)
 	Recurrence *taskRecurrenceDTO `json:"recurrence,omitempty"`
 }
 
