@@ -149,7 +149,6 @@ func validateCreateInput(input CreateInput) (CreateInput, error) {
 		return CreateInput{}, fmt.Errorf("%w: invalid status", ErrInvalidInput)
 	}
 
-	// Валидация периодичности
 	if err := validateRecurrence(input.RecurrenceType, input.RecurrenceInterval,
 		input.RecurrenceDayOfMonth, input.SpecificDates, input.StartDate, input.EndDate); err != nil {
 		return CreateInput{}, err
