@@ -213,7 +213,7 @@ func scanRecurrence(scanner interface{ Scan(dest ...any) error }) (*taskdomain.T
 		&rec.UpdatedAt,
 	); err != nil {
 		if errors.Is(err, pgx.ErrNoRows) {
-			return nil, nil // recurrence не найден — это нормально
+			return nil, nil 
 		}
 		return nil, err
 	}
