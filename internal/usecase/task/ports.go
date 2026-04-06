@@ -31,8 +31,6 @@ type CreateInput struct {
 	Title       string
 	Description string
 	Status      taskdomain.Status
-
-	// Периодичность
 	RecurrenceType       taskdomain.RecurrenceType
 	RecurrenceInterval   int
 	RecurrenceDayOfMonth *int
